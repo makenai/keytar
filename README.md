@@ -7,7 +7,7 @@
   **A zero-security SSO surrogate for local development**
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![Docker Image](https://img.shields.io/badge/docker-keytar-blue)](https://hub.docker.com/r/keytar/keytar)
+  [![Docker Image](https://img.shields.io/badge/docker-keytar-blue)](https://hub.docker.com/r/makenai/keytar)
 
 </div>
 
@@ -78,8 +78,8 @@ Keytar was originally created to emulate enterprise SSO implementations for deve
 ### Using Docker (Recommended)
 
 ```bash
-docker pull keytar/keytar:latest
-docker run -p 8020:8020 keytar/keytar:latest
+docker pull makenai/keytar:latest
+docker run -p 8020:8020 makenai/keytar:latest
 ```
 
 ### Drop-in Keycloak Replacement
@@ -94,7 +94,7 @@ services:
 
   # To:
   keycloak:  # Keep the same service name
-    image: keytar/keytar:latest
+    image: makenai/keytar:latest
     environment:
       KC_HTTP_PORT: 8020  # Keytar accepts Keycloak env vars
     ports:

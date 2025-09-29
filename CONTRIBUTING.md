@@ -36,9 +36,11 @@ Before contributing, please understand:
 - For major changes, open an issue first to discuss
 
 ### 2. Fork and Branch
+Fork the repository on GitHub, then:
 ```bash
-git clone https://github.com/yourusername/keytar.git
+git clone https://github.com/<your-github-username>/keytar.git
 cd keytar
+git remote add upstream https://github.com/makenai/keytar.git
 git checkout -b feature/your-feature-name
 ```
 
