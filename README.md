@@ -78,8 +78,13 @@ Keytar was originally created to emulate enterprise SSO implementations for deve
 ### Using Docker (Recommended)
 
 ```bash
+# From Docker Hub
 docker pull makenai/keytar:latest
 docker run -p 8020:8020 makenai/keytar:latest
+
+# Or from GitHub Container Registry
+docker pull ghcr.io/makenai/keytar:latest
+docker run -p 8020:8020 ghcr.io/makenai/keytar:latest
 ```
 
 ### Drop-in Keycloak Replacement
