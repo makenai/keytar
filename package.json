@@ -1,0 +1,25 @@
+{
+  "name": "keytar",
+  "version": "1.0.0",
+  "description": "🎹+🎸=🔐 Lightweight SSO mock service for development",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "docker:build": "docker build -t keytar:latest -t keytar:1.0.0 .",
+    "docker:run": "docker run -p 8020:8020 -v $(pwd)/realm-config.json:/config/realm-config.json keytar:latest"
+  },
+  "keywords": ["sso", "oauth", "mock", "development"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^9.0.1",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

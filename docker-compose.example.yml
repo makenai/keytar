@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  keytar:
+    profiles:
+      - '' # Default profile
+      - flow
+    build: .
+    # Or use the image once published:
+    # image: keytar:latest
+    environment:
+      PORT: 8020
+      REALM_CONFIG: /config/realm-config.json
+      DEBUG: "true"
+      # Optional: Override token expiry (seconds)
+      # TOKEN_EXPIRY: 86400
+    ports:
+      - "8020:8020"
+    volumes:
+      - ./data/keycloak/realm-config.json:/config/realm-config.json:ro
+    networks:
+      - flow-network
+
+networks:
+  flow-network:
+    driver: bridge

@@ -1,0 +1,6 @@
+#!/bin/sh
+# KeyCloak compatibility script - ignores all arguments
+# This allows command: ["start-dev", "--import-realm"] to work without changes
+
+echo "🎹+🎸=🔐 Keytar start-dev (ignoring arguments: $@)"
+exec node /app/server.js
